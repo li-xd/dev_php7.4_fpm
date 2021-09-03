@@ -7,7 +7,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
 
 RUN apk add --update git curl wget 
 
-ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
+RUN curl https://getcomposer.org/composer.phar >> /usr/local/bin/composer
 COPY docker-entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
