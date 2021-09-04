@@ -5,7 +5,7 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions gd xdebug redis intl opcache PDO_MySQL
 
-RUN apk add --update git curl wget 
+RUN apk add --no-cache git wget 
 
 RUN curl https://getcomposer.org/composer.phar >> /usr/local/bin/composer
 COPY docker-entrypoint.sh /entrypoint.sh
