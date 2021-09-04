@@ -8,6 +8,3 @@ RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
 RUN apk add --no-cache git wget 
 
 RUN curl https://getcomposer.org/composer.phar >> /usr/local/bin/composer
-COPY docker-entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
